@@ -10,12 +10,12 @@ const crearArchivo = async( base = 5, listar = false, hasta = 10 ) => {
         
         for( let i = 1; i <= hasta; i++ ) {
             salida  += `${ base } x ${ i } = ${ base * i }\n`;
-            consola += `${ base } ${ 'x'.green } ${ i } ${ '='.green } ${ base * i }\n`;
+            consola += `${ base } ${ 'x'.green } ${ i } ${ '='.blue } ${ base * i }\n`;
         }
 
         if ( listar ) {
             console.log('===================='.green);
-            console.log('   Tabla del:'.green, colors.blue( base ) );
+            console.log('   Tabla del:'.yellow, colors.blue( base ) );
             console.log('===================='.green);
 
             console.log(consola);
@@ -30,8 +30,6 @@ const crearArchivo = async( base = 5, listar = false, hasta = 10 ) => {
     } catch (err) {
         throw err;
     }
-
-
 
 }
 
